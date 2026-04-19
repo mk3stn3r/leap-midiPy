@@ -1,0 +1,52 @@
+{
+  "_info": "leap_midi mapping \u2014 edit freely, restart script to reload.",
+  "midi_channel": 0,
+  "velocity_fixed": null,
+  "left_hand": {
+    "axis": "palm_y",
+    "note_min": 48,
+    "note_max": 72,
+    "cc_send": false,
+    "cc_number": 1,
+    "trigger_mode": "gate"
+  },
+  "right_hand": {
+    "axis": "palm_y",
+    "note_min": 60,
+    "note_max": 84,
+    "cc_send": true,
+    "cc_number": 74,
+    "trigger_mode": "gate"
+  },
+  "gestures": {
+    "swipe_left": {
+      "type": "swipe",
+      "direction": "left",
+      "note": 36,
+      "velocity": 100
+    },
+    "swipe_right": {
+      "type": "swipe",
+      "direction": "right",
+      "note": 38,
+      "velocity": 100
+    },
+    "circle": {
+      "type": "circle",
+      "note": 40,
+      "velocity": 100
+    },
+    "key_tap": {
+      "type": "keyTap",
+      "note": 42,
+      "velocity": 110
+    },
+    "screen_tap": {
+      "type": "screenTap",
+      "note": 44,
+      "velocity": 100
+    }
+  },
+  "gesture_note_duration": 0.12,
+  "ws_url": "ws://localhost:6437/v6.json"
+}

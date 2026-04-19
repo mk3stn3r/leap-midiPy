@@ -1,0 +1,206 @@
+{
+  "_info": "Extended Minitaur mapping — all gesture variants, per-finger screen/key taps, circle CC mode.",
+
+  "midi_channel": 0,
+  "velocity_fixed": null,
+  "ws_url": "ws://localhost:6437/v6.json",
+
+  "_hand_notes": [
+    "Left hand  palm_y → bass notes C2-C3, grab axis → CC74 filter cutoff",
+    "Right hand palm_y → lead notes C3-C4, roll axis → CC71 filter resonance"
+  ],
+
+  "left_hand": {
+    "axis":         "palm_y",
+    "note_min":     36,
+    "note_max":     48,
+    "cc_send":      true,
+    "cc_number":    74,
+    "cc_axis":      "grab",
+    "trigger_mode": "retrigger"
+  },
+
+  "right_hand": {
+    "axis":         "palm_y",
+    "note_min":     48,
+    "note_max":     60,
+    "cc_send":      true,
+    "cc_number":    71,
+    "cc_axis":      "roll",
+    "trigger_mode": "retrigger"
+  },
+
+  "_circle_cc_info": [
+    "circle_cc replaces circle note triggers entirely.",
+    "Clockwise circle  → CC74 (filter cutoff) increases by 'step' per frame.",
+    "Counter-clockwise → CC74 decreases by 'step' per frame.",
+    "Set to null to use note triggers for circles instead."
+  ],
+  "circle_cc": {
+    "cc_number": 74,
+    "step": 4
+  },
+
+  "gesture_note_duration": 0.10,
+
+  "gestures": {
+
+    "_swipes": "─────────────────────────────────────────────────",
+
+    "swipe_left": {
+      "_comment": "Horizontal swipe left → root C2",
+      "type": "swipe", "direction": "left",
+      "note": 36, "velocity": 110
+    },
+    "swipe_right": {
+      "_comment": "Horizontal swipe right → G2 (fifth)",
+      "type": "swipe", "direction": "right",
+      "note": 43, "velocity": 110
+    },
+    "swipe_up": {
+      "_comment": "Upward swipe → C3 (octave up)",
+      "type": "swipe", "direction": "up",
+      "note": 48, "velocity": 100
+    },
+    "swipe_down": {
+      "_comment": "Downward swipe → C1 (sub-bass drop)",
+      "type": "swipe", "direction": "down",
+      "note": 24, "velocity": 120
+    },
+    "swipe_toward": {
+      "_comment": "Push toward screen → A2 accent",
+      "type": "swipe", "direction": "toward",
+      "note": 45, "velocity": 100
+    },
+    "swipe_away": {
+      "_comment": "Pull away from screen → D2",
+      "type": "swipe", "direction": "away",
+      "note": 38, "velocity": 95
+    },
+
+    "_screen_taps_right": "─────────────────────────────────────────",
+
+    "screen_tap_right_0": {
+      "_comment": "Right thumb forward tap → C1 (MIDI 24)",
+      "type": "screenTap", "hand": "right", "finger": 0,
+      "note": 24, "velocity": 110
+    },
+    "screen_tap_right_1": {
+      "_comment": "Right index forward tap → D1 (MIDI 26)",
+      "type": "screenTap", "hand": "right", "finger": 1,
+      "note": 26, "velocity": 110
+    },
+    "screen_tap_right_2": {
+      "_comment": "Right middle forward tap → E1 (MIDI 28)",
+      "type": "screenTap", "hand": "right", "finger": 2,
+      "note": 28, "velocity": 110
+    },
+    "screen_tap_right_3": {
+      "_comment": "Right ring forward tap → F1 (MIDI 29)",
+      "type": "screenTap", "hand": "right", "finger": 3,
+      "note": 29, "velocity": 110
+    },
+    "screen_tap_right_4": {
+      "_comment": "Right pinky forward tap → G1 (MIDI 31)",
+      "type": "screenTap", "hand": "right", "finger": 4,
+      "note": 31, "velocity": 110
+    },
+
+    "_screen_taps_left": "──────────────────────────────────────────",
+
+    "screen_tap_left_0": {
+      "_comment": "Left thumb forward tap → C0 (MIDI 12)",
+      "type": "screenTap", "hand": "left", "finger": 0,
+      "note": 12, "velocity": 110
+    },
+    "screen_tap_left_1": {
+      "_comment": "Left index forward tap → D0 (MIDI 14)",
+      "type": "screenTap", "hand": "left", "finger": 1,
+      "note": 14, "velocity": 110
+    },
+    "screen_tap_left_2": {
+      "_comment": "Left middle forward tap → E0 (MIDI 16)",
+      "type": "screenTap", "hand": "left", "finger": 2,
+      "note": 16, "velocity": 110
+    },
+    "screen_tap_left_3": {
+      "_comment": "Left ring forward tap → F0 (MIDI 17)",
+      "type": "screenTap", "hand": "left", "finger": 3,
+      "note": 17, "velocity": 110
+    },
+    "screen_tap_left_4": {
+      "_comment": "Left pinky forward tap → G0 (MIDI 19)",
+      "type": "screenTap", "hand": "left", "finger": 4,
+      "note": 19, "velocity": 110
+    },
+
+    "_key_taps_right": "───────────────────────────────────────────",
+
+    "key_tap_right_0": {
+      "_comment": "Right thumb downward tap → C3 (MIDI 48)",
+      "type": "keyTap", "hand": "right", "finger": 0,
+      "note": 48, "velocity": 127
+    },
+    "key_tap_right_1": {
+      "_comment": "Right index downward tap → D3 (MIDI 50)",
+      "type": "keyTap", "hand": "right", "finger": 1,
+      "note": 50, "velocity": 127
+    },
+    "key_tap_right_2": {
+      "_comment": "Right middle downward tap → E3 (MIDI 52)",
+      "type": "keyTap", "hand": "right", "finger": 2,
+      "note": 52, "velocity": 127
+    },
+    "key_tap_right_3": {
+      "_comment": "Right ring downward tap → F3 (MIDI 53)",
+      "type": "keyTap", "hand": "right", "finger": 3,
+      "note": 53, "velocity": 127
+    },
+    "key_tap_right_4": {
+      "_comment": "Right pinky downward tap → G3 (MIDI 55)",
+      "type": "keyTap", "hand": "right", "finger": 4,
+      "note": 55, "velocity": 127
+    },
+
+    "_key_taps_left": "────────────────────────────────────────────",
+
+    "key_tap_left_0": {
+      "_comment": "Left thumb downward tap → C2 (MIDI 36)",
+      "type": "keyTap", "hand": "left", "finger": 0,
+      "note": 36, "velocity": 127
+    },
+    "key_tap_left_1": {
+      "_comment": "Left index downward tap → D2 (MIDI 38)",
+      "type": "keyTap", "hand": "left", "finger": 1,
+      "note": 38, "velocity": 127
+    },
+    "key_tap_left_2": {
+      "_comment": "Left middle downward tap → E2 (MIDI 40)",
+      "type": "keyTap", "hand": "left", "finger": 2,
+      "note": 40, "velocity": 127
+    },
+    "key_tap_left_3": {
+      "_comment": "Left ring downward tap → F2 (MIDI 41)",
+      "type": "keyTap", "hand": "left", "finger": 3,
+      "note": 41, "velocity": 127
+    },
+    "key_tap_left_4": {
+      "_comment": "Left pinky downward tap → G2 (MIDI 43)",
+      "type": "keyTap", "hand": "left", "finger": 4,
+      "note": 43, "velocity": 127
+    }
+  },
+
+  "_minitaur_setup": [
+    "MIDI channel 1 (index 0) — Minitaur default.",
+    "Enable CC receive: hold MASTER VOL + CUTOFF on Minitaur power-up.",
+    "Circle CW  → filter opens  (CC74 increases by 4 per frame).",
+    "Circle CCW → filter closes (CC74 decreases by 4 per frame).",
+    "Increase 'step' in circle_cc for faster sweeps, decrease for fine control.",
+    "Screen taps right fingers 0-4 → C1 D1 E1 F1 G1  (MIDI 24 26 28 29 31).",
+    "Screen taps left  fingers 0-4 → C0 D0 E0 F0 G0  (MIDI 12 14 16 17 19).",
+    "Key taps   right fingers 0-4  → C3 D3 E3 F3 G3.",
+    "Key taps   left  fingers 0-4  → C2 D2 E2 F2 G2.",
+    "Minitaur is monophonic — palm notes and finger taps compete; use one at a time."
+  ]
+}

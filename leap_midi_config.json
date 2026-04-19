@@ -1,0 +1,27 @@
+{
+  "midi_channel": 0,
+  "velocity": 100,
+  "velocity_from_height": true,
+  "height_min_mm": 50,
+  "height_max_mm": 400,
+  "note_off_delay_ms": 200,
+  "interaction_zone": {
+    "x_min": -200,
+    "x_max": 200,
+    "z_min": -200,
+    "z_max": 200
+  },
+  "finger_note_map": {
+    "0": 60,
+    "1": 62,
+    "2": 64,
+    "3": 65,
+    "4": 67
+  },
+  "palm_x_to_note": {
+    "enabled": false,
+    "note_low": 48,
+    "note_high": 72
+  },
+  "gesture_map": {}
+}

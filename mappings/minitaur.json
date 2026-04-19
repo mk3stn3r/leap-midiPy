@@ -1,0 +1,131 @@
+{
+  "_info": "Moog Minitaur mapping for leap_midi.py — Minitaur default MIDI channel is 1 (index 0).",
+  "_minitaur_cc_reference": {
+    "CC 16": "VCO1 Level",
+    "CC 17": "VCO2 Level",
+    "CC 18": "VCO1 Wave (0=saw, 127=square)",
+    "CC 19": "VCO2 Wave (0=saw, 127=square)",
+    "CC 20": "VCO2 Frequency (coarse)",
+    "CC 21": "VCO2 Fine Tune",
+    "CC 24": "Filter Cutoff (also CC 74)",
+    "CC 25": "Filter Resonance (also CC 71)",
+    "CC 26": "Filter EG Amount",
+    "CC 27": "Filter EG Attack",
+    "CC 28": "Filter EG Decay",
+    "CC 29": "Filter EG Sustain",
+    "CC 30": "Filter EG Release",
+    "CC 31": "VCA EG Attack",
+    "CC 63": "VCA EG Decay",
+    "CC 64": "Sustain pedal (hold)",
+    "CC 65": "Glide on/off (0=off, 127=on)",
+    "CC 70": "VCA EG Release",
+    "CC 71": "Filter Resonance",
+    "CC 74": "Filter Cutoff",
+    "CC 75": "VCA EG Decay (alias)",
+    "CC 85": "LFO Rate",
+    "CC 86": "LFO Pitch Amount",
+    "CC 87": "LFO Filter Amount",
+    "CC 88": "LFO Wave (0=tri, 32=ramp, 64=saw, 96=square, 127=rand)",
+    "CC 92": "EG Destination (0=filter, 64=VCA, 127=both)",
+    "CC 93": "Glide Rate",
+    "CC 94": "Glide Type (0=legato, 64=fingered, 127=always)"
+  },
+
+  "midi_channel": 0,
+
+  "velocity_fixed": null,
+
+  "ws_url": "ws://localhost:6437/v6.json",
+
+  "_hand_notes": [
+    "Left hand height (palm_y) plays bass notes — low range suits the Minitaur's sub-bass voice.",
+    "Right hand height (palm_y) plays lead/melodic notes one octave up.",
+    "Left hand grab opens/closes the filter cutoff via CC 74 — squeeze fist to close filter.",
+    "Right hand roll sweeps filter resonance via CC 71 — tilt palm for resonance.",
+    "Both hands use 'retrigger' so every semitone shift fires a new note-on, fitting monophonic bass."
+  ],
+
+  "left_hand": {
+    "_comment": "Bass register — C2 to C3. grab axis controls filter cutoff (CC 74).",
+    "axis": "palm_y",
+    "note_min": 36,
+    "note_max": 48,
+    "cc_send": true,
+    "cc_number": 74,
+    "_cc_axis": "grab",
+    "trigger_mode": "retrigger"
+  },
+
+  "right_hand": {
+    "_comment": "Lead register — C3 to C4. roll axis controls filter resonance (CC 71).",
+    "axis": "palm_y",
+    "note_min": 48,
+    "note_max": 60,
+    "cc_send": true,
+    "cc_number": 71,
+    "_cc_axis": "roll",
+    "trigger_mode": "retrigger"
+  },
+
+  "_cc_extra": {
+    "_comment": "These CCs cannot be sent automatically by leap_midi.py's current hand states.",
+    "_comment2": "They are documented here for manual mapping or future script extension.",
+    "LFO_rate":          {"cc": 85, "note": "Map to palm_z or a second CC output"},
+    "LFO_filter_amount": {"cc": 87, "note": "Great target for pitch axis"},
+    "glide_rate":        {"cc": 93, "note": "Map to sphere_radius for on-the-fly glide"},
+    "filter_EG_attack":  {"cc": 27},
+    "filter_EG_decay":   {"cc": 28},
+    "VCA_EG_attack":     {"cc": 31},
+    "VCA_EG_release":    {"cc": 70}
+  },
+
+  "gestures": {
+    "_comment": "Gesture notes use the Minitaur's lower register as percussion / accent triggers.",
+
+    "swipe_left": {
+      "_comment": "Swipe left — root note C2, hard accent. Good for kick/bass hit.",
+      "type": "swipe",
+      "direction": "left",
+      "note": 36,
+      "velocity": 120
+    },
+    "swipe_right": {
+      "_comment": "Swipe right — fifth above root (G2), medium velocity.",
+      "type": "swipe",
+      "direction": "right",
+      "note": 43,
+      "velocity": 100
+    },
+    "circle": {
+      "_comment": "Circle gesture — octave C3, soft. Use for sustained sub-bass swell.",
+      "type": "circle",
+      "note": 48,
+      "velocity": 80
+    },
+    "key_tap": {
+      "_comment": "Downward finger tap — D2, loud. Snappy staccato attack.",
+      "type": "keyTap",
+      "note": 38,
+      "velocity": 127
+    },
+    "screen_tap": {
+      "_comment": "Forward finger tap — A2, medium. Good for off-beat accents.",
+      "type": "screenTap",
+      "note": 45,
+      "velocity": 95
+    }
+  },
+
+  "gesture_note_duration": 0.10,
+
+  "_setup_tips": [
+    "Set Minitaur to MIDI channel 1 (default) — matches midi_channel: 0 above.",
+    "Enable MIDI CC receive on the Minitaur: hold MASTER VOL + CUTOFF on power-up.",
+    "For expressive filter sweeps: left hand grab (fist=closed filter, open palm=bright).",
+    "For resonance: tilt right palm flat (low resonance) to vertical (high resonance).",
+    "Glide: send CC 65 value 127 from an external controller or DAW to enable glide,",
+    "       then CC 93 sets the glide rate — pair with palm_z in a future cc_extra block.",
+    "The Minitaur is monophonic — only one hand should play notes at a time for clean output.",
+    "Use left hand for bass/root notes, right hand for melodic movement above."
+  ]
+}

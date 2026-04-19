@@ -1,0 +1,221 @@
+{
+  "_info": "leap_midi mapping \u2014 edit freely, restart script to reload.",
+  "midi_channel": 0,
+  "velocity_fixed": null,
+  "ws_url": "ws://localhost:6437/v6.json",
+  "left_hand": {
+    "axis": "palm_y",
+    "note_min": 48,
+    "note_max": 72,
+    "cc_send": false,
+    "cc_number": 1,
+    "cc_axis": "grab",
+    "trigger_mode": "gate"
+  },
+  "right_hand": {
+    "axis": "palm_y",
+    "note_min": 60,
+    "note_max": 84,
+    "cc_send": true,
+    "cc_number": 74,
+    "cc_axis": "roll",
+    "trigger_mode": "gate"
+  },
+  "gestures": {
+    "swipe_left": {
+      "type": "swipe",
+      "direction": "left",
+      "note": 36,
+      "velocity": 100
+    },
+    "swipe_right": {
+      "type": "swipe",
+      "direction": "right",
+      "note": 38,
+      "velocity": 100
+    },
+    "swipe_up": {
+      "type": "swipe",
+      "direction": "up",
+      "note": 40,
+      "velocity": 100
+    },
+    "swipe_down": {
+      "type": "swipe",
+      "direction": "down",
+      "note": 41,
+      "velocity": 100
+    },
+    "swipe_toward": {
+      "type": "swipe",
+      "direction": "toward",
+      "note": 42,
+      "velocity": 100
+    },
+    "swipe_away": {
+      "type": "swipe",
+      "direction": "away",
+      "note": 43,
+      "velocity": 100
+    },
+    "circle_cw": {
+      "type": "circle",
+      "direction": "clockwise",
+      "note": 44,
+      "velocity": 100
+    },
+    "circle_ccw": {
+      "type": "circle",
+      "direction": "counterclockwise",
+      "note": 45,
+      "velocity": 100
+    },
+    "key_tap": {
+      "type": "keyTap",
+      "note": 46,
+      "velocity": 110
+    },
+    "screen_tap_right_0": {
+      "type": "screenTap",
+      "hand": "right",
+      "finger": 0,
+      "note": 48,
+      "velocity": 100
+    },
+    "screen_tap_right_1": {
+      "type": "screenTap",
+      "hand": "right",
+      "finger": 1,
+      "note": 50,
+      "velocity": 100
+    },
+    "screen_tap_right_2": {
+      "type": "screenTap",
+      "hand": "right",
+      "finger": 2,
+      "note": 52,
+      "velocity": 100
+    },
+    "screen_tap_right_3": {
+      "type": "screenTap",
+      "hand": "right",
+      "finger": 3,
+      "note": 53,
+      "velocity": 100
+    },
+    "screen_tap_right_4": {
+      "type": "screenTap",
+      "hand": "right",
+      "finger": 4,
+      "note": 55,
+      "velocity": 100
+    },
+    "screen_tap_left_0": {
+      "type": "screenTap",
+      "hand": "left",
+      "finger": 0,
+      "note": 36,
+      "velocity": 100
+    },
+    "screen_tap_left_1": {
+      "type": "screenTap",
+      "hand": "left",
+      "finger": 1,
+      "note": 38,
+      "velocity": 100
+    },
+    "screen_tap_left_2": {
+      "type": "screenTap",
+      "hand": "left",
+      "finger": 2,
+      "note": 40,
+      "velocity": 100
+    },
+    "screen_tap_left_3": {
+      "type": "screenTap",
+      "hand": "left",
+      "finger": 3,
+      "note": 41,
+      "velocity": 100
+    },
+    "screen_tap_left_4": {
+      "type": "screenTap",
+      "hand": "left",
+      "finger": 4,
+      "note": 43,
+      "velocity": 100
+    },
+    "key_tap_right_0": {
+      "type": "keyTap",
+      "hand": "right",
+      "finger": 0,
+      "note": 60,
+      "velocity": 110
+    },
+    "key_tap_right_1": {
+      "type": "keyTap",
+      "hand": "right",
+      "finger": 1,
+      "note": 62,
+      "velocity": 110
+    },
+    "key_tap_right_2": {
+      "type": "keyTap",
+      "hand": "right",
+      "finger": 2,
+      "note": 64,
+      "velocity": 110
+    },
+    "key_tap_right_3": {
+      "type": "keyTap",
+      "hand": "right",
+      "finger": 3,
+      "note": 65,
+      "velocity": 110
+    },
+    "key_tap_right_4": {
+      "type": "keyTap",
+      "hand": "right",
+      "finger": 4,
+      "note": 67,
+      "velocity": 110
+    },
+    "key_tap_left_0": {
+      "type": "keyTap",
+      "hand": "left",
+      "finger": 0,
+      "note": 48,
+      "velocity": 110
+    },
+    "key_tap_left_1": {
+      "type": "keyTap",
+      "hand": "left",
+      "finger": 1,
+      "note": 50,
+      "velocity": 110
+    },
+    "key_tap_left_2": {
+      "type": "keyTap",
+      "hand": "left",
+      "finger": 2,
+      "note": 52,
+      "velocity": 110
+    },
+    "key_tap_left_3": {
+      "type": "keyTap",
+      "hand": "left",
+      "finger": 3,
+      "note": 53,
+      "velocity": 110
+    },
+    "key_tap_left_4": {
+      "type": "keyTap",
+      "hand": "left",
+      "finger": 4,
+      "note": 55,
+      "velocity": 110
+    }
+  },
+  "gesture_note_duration": 0.12,
+  "circle_cc": null
+}
